@@ -1,9 +1,10 @@
 * Set serial console baudrate to 115200 since cable can't handle 1500000
+* Enable UART3
 
 Upstream-Status: Inappropriate
 
 diff --git a/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3.dtsi b/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3.dtsi
-index 9cc7aa3298d0..2e346992722c 100644
+index 9cc7aa3298d0..3176e745a849 100644
 --- a/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3.dtsi
 +++ b/arch/arm64/boot/dts/rockchip/rk3566-radxa-zero-3.dtsi
 @@ -7,7 +7,7 @@
@@ -15,3 +16,14 @@ index 9cc7aa3298d0..2e346992722c 100644
  	};
  
  	hdmi-con {
+@@ -492,6 +492,10 @@ &uart2 {
+ 	status = "okay";
+ };
+ 
++&uart3 {
++	status = "okay";
++};
++
+ &usb_host0_xhci {
+ 	dr_mode = "peripheral";
+ 	status = "okay";
