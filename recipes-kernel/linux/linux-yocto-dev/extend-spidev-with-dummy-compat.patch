@@ -1,3 +1,7 @@
+* Need a dummy spidev to bind to
+
+Upstream-Status: Inappropriate
+
 diff --git a/drivers/spi/spidev.c b/drivers/spi/spidev.c
 index 653f82984216..f1a90fe9f05b 100644
 --- a/drivers/spi/spidev.c
