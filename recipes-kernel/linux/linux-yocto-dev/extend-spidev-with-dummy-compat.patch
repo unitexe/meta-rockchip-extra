@@ -1,20 +1,20 @@
-* Need a dummy spidev to bind to
+* Add a dummy spidev to bind to
 
 Upstream-Status: Inappropriate
 
 diff --git a/drivers/spi/spidev.c b/drivers/spi/spidev.c
-index 653f82984216..f1a90fe9f05b 100644
+index 58ae4304fdab..96b5a37166b4 100644
 --- a/drivers/spi/spidev.c
 +++ b/drivers/spi/spidev.c
-@@ -711,6 +711,7 @@ static const struct spi_device_id spidev_spi_ids[] = {
- 	{ .name = "spi-authenta" },
- 	{ .name = "em3581" },
- 	{ .name = "si3210" },
-+	{ .name = "spi-any" },
+@@ -716,6 +716,7 @@ static const struct spi_device_id spidev_spi_ids[] = {
+ 	{ .name = /* semtech */ "sx1301" },
+ 	{ .name = /* silabs */ "em3581" },
+ 	{ .name = /* silabs */ "si3210" },
++	{ .name = /* unitexe */ "spi-any" },
  	{},
  };
  MODULE_DEVICE_TABLE(spi, spidev_spi_ids);
-@@ -741,6 +742,7 @@ static const struct of_device_id spidev_dt_ids[] = {
+@@ -747,6 +748,7 @@ static const struct of_device_id spidev_dt_ids[] = {
  	{ .compatible = "semtech,sx1301", .data = &spidev_of_check },
  	{ .compatible = "silabs,em3581", .data = &spidev_of_check },
  	{ .compatible = "silabs,si3210", .data = &spidev_of_check },
